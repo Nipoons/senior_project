@@ -44,11 +44,11 @@ var cmd_vel_listener2 = new ROSLIB.Topic({
 });
 
 txt_listener2.subscribe(function (k) {
-    document.getElementById("msg2").innerHTML = k.data;
+    document.getElementById("msg2").textContent = k.data;
 });
 
 number_obs.subscribe(function (k) {
-    document.getElementById("num_objects").innerHTML = k.data;
+    document.getElementById("num_objects").textContent = k.data;
 });
 
 var test = [];
@@ -59,33 +59,33 @@ type_obs.subscribe(function (k) {
     test = k.data;
 
     if (k.data.includes(1)) {
-        document.getElementById("type_objectsGC").innerHTML = "G - C";
+        document.getElementById("type_objectsGC").textContent = "G - C";
     }
     else {
-        document.getElementById("type_objectsGC").innerHTML = [];
+        document.getElementById("type_objectsGC").textContent = [];
     }
 
     if (k.data.includes(0)) {
-        document.getElementById("type_objectsRC").innerHTML = "R - C";
+        document.getElementById("type_objectsRC").textContent = "R - C";
     }
     else {
-        document.getElementById("type_objectsRC").innerHTML = [];
+        document.getElementById("type_objectsRC").textContent = [];
     }
 
 
     if (k.data.includes(3)) {
-        document.getElementById("type_objectsRR").innerHTML = "R - R";
+        document.getElementById("type_objectsRR").textContent = "R - R";
     }
     else {
-        document.getElementById("type_objectsRR").innerHTML = [];
+        document.getElementById("type_objectsRR").textContent = [];
     }
 
     if (k.data.includes(2)) {
-        document.getElementById("type_objectsGR").innerHTML = "G - R";
+        document.getElementById("type_objectsGR").textContent = "G - R";
     }
     else {
 
-        document.getElementById("type_objectsGR").innerHTML = [];
+        document.getElementById("type_objectsGR").textContent = [];
     }
 
 });
@@ -109,16 +109,16 @@ but_arr = function (data) {
 }
 
 ros.on('connection', function () {
-    document.getElementById("status").innerHTML = "Connected";
+    document.getElementById("status").textContent = "Connected";
     document.getElementById("status").style.color = "Green";
 
 });
 ros.on('error', function (error) {
-    document.getElementById("status").innerHTML = "Error";
+    document.getElementById("status").textContent = "Error";
     // alert("disconnected it have a problem")
 });
 ros.on('close', function () {
-    document.getElementById("status").innerHTML = "Disconnect";
+    document.getElementById("status").textContent = "Disconnect";
     document.getElementById("status").style.color = "red";
 
 });
@@ -165,23 +165,23 @@ var urdf = function (x, y) {
     });
 }
 window.onload = function () {
-    
-        var sizew = document.getElementById('sizestream').clientWidth
-        var sizeh = document.getElementById('sizestream').clientHeight
-        var sizemw = document.getElementById('sizemodel').clientWidth
-        var sizemh = document.getElementById('sizemodel').clientHeight
 
-        var mh = sizemh - 70;
-        var mw = sizemw - 10 - 23;
+    var sizew = document.getElementById('sizestream').clientWidth
+    var sizeh = document.getElementById('sizestream').clientHeight
+    var sizemw = document.getElementById('sizemodel').clientWidth
+    var sizemh = document.getElementById('sizemodel').clientHeight
+
+    var mh = sizemh - 70;
+    var mw = sizemw - 10 - 23;
 
 
-        console.log(sizew)
-        var h = sizeh - 170;
-        var w = sizew - 10 - 23;
-        createViewer2(h, w);
-        urdf(mh, mw);
-  
-        
+    console.log(sizew)
+    var h = sizeh - 170;
+    var w = sizew - 10 - 23;
+    createViewer2(h, w);
+    urdf(mh, mw);
+
+
 
 
 
@@ -223,9 +223,9 @@ function mode() {
 
             });
         });
-        // document.getElementById("onoff").innerHTML = "Off";
+        // document.getElementById("onoff").textContent = "Off";
         document.getElementById("togglemode").className = "btn btn-outline-danger mt-1 ms-2 mb-2";
-        document.getElementById("modechange").innerHTML = "Auto";
+        document.getElementById("modechange").textContent = "Auto";
         document.getElementById("joint_cont").style.display = "none";
 
         for (i = 1; i < 12; i++) {
@@ -275,9 +275,9 @@ function mode() {
         });
 
 
-        // document.getElementById("onoff").innerHTML = "On";
+        // document.getElementById("onoff").textContent = "On";
         document.getElementById("togglemode").className = "btn btn-outline-primary mt-1 ms-2 mb-2";
-        document.getElementById("modechange").innerHTML = "Manual";
+        document.getElementById("modechange").textContent = "Manual";
         document.getElementById("joint_cont").style.display = "initial";
 
         for (i = 1; i < 10; i++) {
@@ -317,79 +317,79 @@ function mode() {
         slider5.value = a[4];
         slider6.value = a[5];
 
-        output1.innerHTML = slider1.value;
-        output2.innerHTML = slider2.value;
-        output3.innerHTML = slider3.value;
-        output4.innerHTML = slider4.value;
-        output5.innerHTML = slider5.value;
-        output6.innerHTML = slider6.value;
+        output1.textContent = slider1.value;
+        output2.textContent = slider2.value;
+        output3.textContent = slider3.value;
+        output4.textContent = slider4.value;
+        output5.textContent = slider5.value;
+        output6.textContent = slider6.value;
 
 
 
 
         slider1.oninput = function () {
-            output1.innerHTML = this.value;
+            output1.textContent = this.value;
 
         }
 
         slider1.onchange = function () {
-            var join = output1.innerHTML
+            var join = output1.textContent
             console.log(join)
             a[0] = Number(join)
             console.log(a)
             aj(a);
         }
         slider2.oninput = function () {
-            output2.innerHTML = this.value;
+            output2.textContent = this.value;
         }
 
         slider2.onchange = function () {
-            output2.innerHTML = this.value;
-            var join2 = output2.innerHTML
+            output2.textContent = this.value;
+            var join2 = output2.textContent
             a[1] = Number(join2)
 
             console.log(a)
             aj(a);
         }
         slider3.oninput = function () {
-            output3.innerHTML = this.value;
+            output3.textContent = this.value;
         }
         slider3.onchange = function () {
-            output3.innerHTML = this.value;
-            var join3 = output3.innerHTML
+            output3.textContent = this.value;
+            var join3 = output3.textContent
             a[2] = Number(join3)
 
             console.log(a)
             aj(a);
         }
         slider4.oninput = function () {
-            output4.innerHTML = this.value;
+            output4.textContent = this.value;
         }
         slider4.onchange = function () {
-            output4.innerHTML = this.value;
-            var join4 = output4.innerHTML
+            output4.textContent = this.value;
+            var join4 = output4.textContent
             a[3] = Number(join4)
 
             console.log(a)
             aj(a);
         }
         slider5.oninput = function () {
-            output5.innerHTML = this.value;
+            output5.textContent = this.value;
         }
         slider5.onchange = function () {
-            output5.innerHTML = this.value;
-            var join5 = output5.innerHTML
+            output5.textContent = this.value;
+            var join5 = output5.textContent
             a[4] = Number(join5)
 
             console.log(a)
             aj(a);
         }
         slider6.oninput = function () {
-            output6.innerHTML = this.value;
+            output6.textContent = this.value;
         }
         slider6.onchange = function () {
-            output6.innerHTML = this.value;
-            var join6 = output6.innerHTML
+            output6.textContent = this.value;
+            var join6 = output6.textContent
             a[5] = Number(join6)
 
             console.log(a)
@@ -402,9 +402,9 @@ function mode() {
     }// power on
 }
 function clearReset() {
-    document.getElementById("shape").innerHTML = "-";
-    document.getElementById("color").innerHTML = "-";
-    document.getElementById("color").style.color="black"
+    document.getElementById("shape").textContent = "-";
+    document.getElementById("color").textContent = "-";
+    document.getElementById("color").style.color = "black"
     document.getElementById('cir').style.display = 'none'
     document.getElementById('sqr').style.display = 'none'
 
@@ -464,8 +464,8 @@ lp = function (data) {
 var c = 1
 function circle() {
     document.getElementById('cir').style.display = 'initial'
-    document.getElementById("cir").style.color="black"
-    document.getElementById("color").innerHTML = "-";
+    document.getElementById("cir").style.color = "black"
+    document.getElementById("color").textContent = "-";
 
 
     var pos = pos_obs_sub;
@@ -478,7 +478,7 @@ function circle() {
             cc.push(newPos[i]);
         }
     }
-    document.getElementById("shape").innerHTML = "";
+    document.getElementById("shape").textContent = "";
     document.getElementById('sqr').style.display = 'none'
 
     console.log("Circle");
@@ -493,8 +493,8 @@ function circle() {
 function rectangle() {
     document.getElementById('cir').style.display = 'none'
     document.getElementById('sqr').style.display = 'initial'
-    document.getElementById("color").innerHTML = "-";
-    document.getElementById("rec").style.color="black"
+    document.getElementById("color").textContent = "-";
+    document.getElementById("rec").style.color = "black"
 
 
 
@@ -508,7 +508,7 @@ function rectangle() {
             rt.push(newPos[i]);
         }
     }
-    document.getElementById("shape").innerHTML = "";
+    document.getElementById("shape").textContent = "";
     console.log("Rectangle");
     var arr = [];
     arr[1] = 4;
@@ -529,9 +529,9 @@ function red() {
             red.push(newPos[i]);
         }
     }
-    document.getElementById("color").innerHTML = "Red";
-    document.getElementById("color").style.color="red"
-    document.getElementById("shape").innerHTML = "-";
+    document.getElementById("color").textContent = "Red";
+    document.getElementById("color").style.color = "red"
+    document.getElementById("shape").textContent = "-";
     document.getElementById('cir').style.display = 'none'
     document.getElementById('sqr').style.display = 'none'
 
@@ -556,9 +556,9 @@ function green() {
             grn.push(newPos[i]);
         }
     }
-    document.getElementById("color").innerHTML = "Green";
-    document.getElementById("color").style.color="Green"
-    document.getElementById("shape").innerHTML = "-";
+    document.getElementById("color").textContent = "Green";
+    document.getElementById("color").style.color = "Green"
+    document.getElementById("shape").textContent = "-";
     document.getElementById('cir').style.display = 'none'
     document.getElementById('sqr').style.display = 'none'
 
@@ -586,12 +586,12 @@ function box1() {
             grnR.push(newPos[i]);
         }
     }
-    document.getElementById("color").innerHTML = "Green";
-    document.getElementById("color").style.color="Green"
-    document.getElementById("sqr").style.color="Green"
+    document.getElementById("color").textContent = "Green";
+    document.getElementById("color").style.color = "Green"
+    document.getElementById("sqr").style.color = "Green"
 
 
-    document.getElementById("shape").innerHTML = "";
+    document.getElementById("shape").textContent = "";
     console.log("Green-Rectangle");
     var arr = [2, 3];
     console.log(arr);
@@ -613,12 +613,12 @@ function box2() {
             grnC.push(newPos[i]);
         }
     }
-    document.getElementById("color").innerHTML = "Green";
-    document.getElementById("color").style.color="Green"
-    document.getElementById("cir").style.color="Green"
+    document.getElementById("color").textContent = "Green";
+    document.getElementById("color").style.color = "Green"
+    document.getElementById("cir").style.color = "Green"
 
 
-    document.getElementById("shape").innerHTML = "";
+    document.getElementById("shape").textContent = "";
     console.log("Green-Circle");
     var arr = [2, 4];
     console.log(arr);
@@ -640,12 +640,12 @@ function box3() {
             redR.push(newPos[i]);
         }
     }
-    document.getElementById("color").innerHTML = "Red";
-    document.getElementById("color").style.color="red"
-    document.getElementById("sqr").style.color="red"
+    document.getElementById("color").textContent = "Red";
+    document.getElementById("color").style.color = "red"
+    document.getElementById("sqr").style.color = "red"
 
 
-    document.getElementById("shape").innerHTML = "";
+    document.getElementById("shape").textContent = "";
     console.log("Red-Rectangle");
     var arr = [1, 3];
     console.log(arr);
@@ -656,7 +656,7 @@ function box3() {
 }
 
 function box4() {
-    // document.getElementById("shape").innerHTML = "Circle";
+    // document.getElementById("shape").textContent = "Circle";
     document.getElementById('sqr').style.display = 'none'
     document.getElementById('cir').style.display = 'initial'
 
@@ -670,12 +670,12 @@ function box4() {
             redC.push(newPos[i]);
         }
     }
-    document.getElementById("color").innerHTML = "Red";
-    document.getElementById("color").style.color="red"
-    document.getElementById("cir").style.color="red"
+    document.getElementById("color").textContent = "Red";
+    document.getElementById("color").style.color = "red"
+    document.getElementById("cir").style.color = "red"
 
 
-    document.getElementById("shape").innerHTML = "";
+    document.getElementById("shape").textContent = "";
     console.log("Red-Circle");
     var arr = [1, 4];
     console.log(arr);
@@ -707,5 +707,22 @@ function stand() {
 
     console.log("stand");
 }
+function login() {
+    const admin = 'admin'
+    const adminpass = 'p@ssword'
+    let username = document.getElementById('username').value
+    let password = document.getElementById('password').value
 
+    console.log(password);
+    if (username == admin && password == adminpass) {
+
+        console.log(username);
+        location.href = 'http://127.0.0.1:5501/html/index.html'
+    }
+    
+    else {
+        alert("username or password wrong")
+    }
+
+}
 
