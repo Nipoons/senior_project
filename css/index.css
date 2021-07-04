@@ -1,93 +1,95 @@
-
 #page-container {
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 #content-wrap {
-    padding-bottom: 2.5rem;   
-    
-     /* Footer height */
+  padding-bottom: 2.5rem;
+  
+
+  /* Footer height */
 }
 
+
+
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 3rem;  
-    background-image: linear-gradient(rgb(238, 106, 29),rgb(233, 109, 37));
-    color: #fff;
-    padding-left: 1rem; 
-    padding-top: 0.6rem;
-    /* background-color: rgb(247, 109, 17);      */
-}a{
-    color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  background-image: linear-gradient(rgb(238, 106, 29), rgb(233, 109, 37));
+  color: #fff;
+  padding-left: 1rem;
+  padding-top: 0.6rem;
+  /* background-color: rgb(247, 109, 17);      */
 }
-a:hover{
-    color: #1651d1;
-    transition: 0.5s all ease-in;
+a {
+  color: white;
+}
+a:hover {
+  color: #1651d1;
+  transition: 0.5s all ease-in;
 }
 @media screen and (min-width: 768px) {
-    button {
+  button {
     width: 9rem;
     height: 3rem;
     font-size: large;
     font-style: bold;
-}
-.col-1 {
+  }
+  .col-1 {
     width: 12rem;
     height: 57rem;
     /* background-color: ghostwhite; */
-}
+  }
 
-
-#joint_cont{
+  #joint_cont {
     transition: all 1s ease-in;
-}
-.btn-outline-primary {
+  }
+  .btn-outline-primary {
     color: rgb(19, 114, 192);
     border-color: rgb(19, 114, 192);
-}
-.btn-outline-primary:hover {
+  }
+  .btn-outline-primary:hover {
     background-color: rgb(19, 114, 192);
-}
-.btn-outline-danger {
+  }
+  .btn-outline-danger {
     color: rgb(194, 12, 12);
     border-color: rgb(194, 12, 12);
-}
-.btn-outline-danger:hover {
+  }
+  .btn-outline-danger:hover {
     background-color: rgb(194, 12, 12);
-}
-.full {
+  }
+  .full {
     height: 1000px;
-}
-.footer {
+  }
+  .footer {
     left: 0;
     bottom: 0;
     width: 100%;
 
     text-align: left;
-}
-body {
+  }
+  body {
     height: 100%;
     margin: 0;
     padding: 0;
     /* background-color: gainsboro; */
-}
+  }
 }
 #overall {
-position: relative;
+  position: relative;
 
-height: 100vh;
+  height: 100vh;
 }
 #mt {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .slidecontainer {
@@ -96,16 +98,16 @@ height: 100vh;
 
 /* The slider itself */
 .slider {
-    -webkit-appearance: none; /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    height: 10px; /* Specified height */
-    border-radius: 1rem;
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
-    transition: opacity 0.2s;
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 10px; /* Specified height */
+  border-radius: 1rem;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
 }
 
 /* Mouse-over effects */
@@ -115,18 +117,18 @@ height: 100vh;
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    border-radius: 5rem;
-    width: 15px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
-    background: #1651d1; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  border-radius: 5rem;
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #1651d1; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
 /* firefox */
 .slider::-moz-range-thumb {
-    width: 15px; /* Set a specific slider handle width */
-    height: 15px; /* Slider handle height */
-    background: #da115e; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+  width: 15px; /* Set a specific slider handle width */
+  height: 15px; /* Slider handle height */
+  background: #da115e; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
