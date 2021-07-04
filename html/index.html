@@ -65,7 +65,7 @@
                     </ul>
                     <div >
                         <a class="nav-link" aria-current="page" href="../html/login.html" style="color: #fff; padding-left: 0;">
-                            Log out
+                            Logout
                         </a>
                     </div>
                 </div>
@@ -78,26 +78,26 @@
                         <!-- button control  -->
                         <div class="col-1 m-1 p-2 " style="border-radius: 8px; ">
 
-                            <h5 style="color:rgb(104, 103, 103); ">Mode</h5>
-                            <button id="togglemode" class="btn btn-outline-primary mt-1 ms-2 mb-2  shadow"
+                            <h5 style="color:rgb(104, 103, 103);text-transform:uppercase; ">Mode</h5>
+                            <button id="togglemode" class="btn btn-outline-dark mt-1 ms-2 mb-2  shadow"
                                 style="font-size: large; " onclick="mode()">Change</button>
                             <hr>
 
-                            <h5 class="mt-2" style="color:rgb(104, 103, 103);">Shape</h5>
+                            <h5 class="mt-2" style="color:rgb(104, 103, 103);text-transform:uppercase;">Shape</h5>
                             <button id="hidebutt1" class="btn btn-outline-dark mt-1 ms-2 mb-2  shadow"
                                 style="font-size: large; " onclick="circle()">Circle</button>
                             <button id="hidebutt2" class="btn btn-outline-dark mt-1 ms-2 mb-2  shadow"
                                 style="font-size: large; " onclick="rectangle()">Rectangle</button>
                             <hr>
 
-                            <h5 class="mt-2" style="color:rgb(104, 103, 103)">Color</h5>
+                            <h5 class="mt-2" style="color:rgb(104, 103, 103); text-transform:uppercase;">Color</h5>
                             <button id="hidebutt3" class="btn btn-outline-danger shadow mt-1 ms-2 mb-2"
                                 style="font-size: large; " onclick="red()">Red</button>
                             <button id="hidebutt4" class="btn btn-outline-success mt-1 ms-2 mb-3  shadow"
                                 style="font-size: large; " onclick="green()">Green</button>
                             <hr>
 
-                            <h5 class="mt-2" style="color:rgb(104, 103, 103)">Options</h5>
+                            <h5 class="mt-2" style="color:rgb(104, 103, 103);text-transform:uppercase;">Options</h5>
                             <button id="hidebutt8" class="btn btn-outline-danger mt-1 ms-2 mb-3 shadow"
                                 style="font-size: large; " onclick="box4()">Red Circle</button>
                             <button id="hidebutt7" class="btn btn-outline-danger mt-1 ms-2 mb-2 shadow"
@@ -121,7 +121,7 @@
                                             style="border-radius: 10px;border: rgb(184, 184, 184);">
                                             <div class="card-header p-2"
                                                 style="color: #fff; background-image: linear-gradient(rgb(16, 98, 153),rgb(22, 89, 175)); border-radius: 10px 10px 0 0; text-align: center; ">
-                                                <h5>Server</h5>
+                                                <h5 style="text-transform:uppercase;">Server</h5>
                                             </div>
                                             <div class="card-body" style="text-align: center; height: 4rem;">
                                                 <h4 id="status" class="refresher">Disconnect</h4>
@@ -134,7 +134,7 @@
                                             style="border-radius: 10px; border: rgb(184, 184, 184);">
                                             <div class="card-header p-2"
                                                 style="color: #fff; background-image: linear-gradient(rgb(16, 98, 153),rgb(22, 89, 175)); border-radius: 10px 10px 0 0; text-align: center;">
-                                                <h5>Mode</h5>
+                                                <h5 style="text-transform:uppercase;">Mode</h5>
                                             </div>
                                             <div class="card-body" style="text-align: center; height: 4rem; ">
                                                 <h4 id="modechange">Auto</h4>
@@ -148,7 +148,7 @@
                                         border-radius: 10px 10px 0 0;
                                         text-align: center;
                                         ">
-                                                <h5>Shape</h5>
+                                                <h5 style="text-transform:uppercase;">Shape</h5>
                                             </div>
                                             <div class="card-body" style="text-align: center; height: 4rem;">
                                                 <div style="display: inline-flex;">
@@ -168,7 +168,7 @@
                                         <div class="card shadow" style="border-radius: 10px; ">
                                             <div class="card-header p-2"
                                                 style="color: #fff; background-image: linear-gradient(rgb(16, 98, 153),rgb(22, 89, 175)); border-radius: 10px 10px 0 0; text-align: center;">
-                                                <h5>Color</h5>
+                                                <h5 style="text-transform:uppercase;">Color</h5>
                                             </div>
                                             <div class="card-body" style="text-align: center; height: 4rem;">
                                                 <h4 id="color">-</h4>
@@ -180,7 +180,7 @@
                                     <!-- robot model -->
                                     <div class="col-5  shadow " id="sizemodel"
                                         style="margin-right: 100px;  border-radius: 8px; padding: 17px; background-color: #fff;">
-                                        <h5 style="color:rgb(104, 103, 103)">Model</h5>
+                                        <h5 style="color:rgb(104, 103, 103);text-transform:uppercase;">Model</h5>
                                         <div class="row mb-5">
                                             <div class="col">
                                                 <div class="mb-2" style="height: 30rem;">
@@ -193,7 +193,7 @@
                                     <div class="col-5 shadow " id="sizestream"
                                         style="border-radius: 8px; padding: 17px; background-color: #fff;">
                                         <div class="row mb-5 ">
-                                            <h5 style="color:rgb(104, 103, 103)">Camera</h5>
+                                            <h5 style="color:rgb(104, 103, 103); text-transform:uppercase;">Camera</h5>
                                             <div class="col-10  mb-2" style="height: 30rem;">
                                                 <div id="mjpeg2"></div>
                                             </div>
@@ -234,7 +234,7 @@
                         <div id="joint_cont" class="col-2 p-2  shadow "
                             style=" margin-right: 3rem; margin-top: 4rem; background-color: #fff; height: 52rem; display: none; border-radius: 8px;  ">
                             <div>
-                                <h5 style="color:rgb(104, 103, 103)">Controller</h5>
+                                <h5 style="color:rgb(104, 103, 103)">JOINT CONTROLLER</h5>
 
                                 <div class="row gx-2 p-3 ">
                                     <div class="col p-2 ">
@@ -299,7 +299,7 @@
                                     </div>
                                 </div>
                                 <div class="row mt-3">
-                                    <h5 style="color:rgb(104, 103, 103)">Set model</h5>
+                                    <h5 style="color:rgb(104, 103, 103)">SET POSITION</h5>
                                     <div class="row justify-content-around ">
                                         <div class="col-4">
                                             <button id="hidebutt10" class="btn btn-outline-dark mt-1 ms-2 mb-1  shadow"
