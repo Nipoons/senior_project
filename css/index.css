@@ -19,8 +19,14 @@
     padding-left: 1rem; 
     padding-top: 0.6rem;
     /* background-color: rgb(247, 109, 17);      */
+}a{
+    color: white;
 }
-@media only screen  and (min-width: 500px) {
+a:hover{
+    color: #1651d1;
+    transition: 0.5s all ease-in;
+}
+@media screen and (min-width: 768px) {
     button {
     width: 9rem;
     height: 3rem;
@@ -54,7 +60,13 @@
 .full {
     height: 1000px;
 }
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
 
+    text-align: left;
+}
 body {
     height: 100%;
     margin: 0;
